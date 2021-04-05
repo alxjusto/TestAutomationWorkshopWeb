@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utilities {
 
-    public void encontrarElemento(WebElement elemento){
+    public void esVisibleElemento(WebElement elemento){
         WebDriverWait wait = new WebDriverWait (FirstTestingApproach.driver,20);
         wait.until(ExpectedConditions.visibilityOf(elemento));
     }

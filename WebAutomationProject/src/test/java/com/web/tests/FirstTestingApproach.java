@@ -3,8 +3,6 @@ package com.web.tests;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +11,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FirstTestingApproach {
 
     public static WebDriver driver;
-    public String precio = "";
+    private String precio = "";
+
+    private By campoDeBusqueda = By.id("gh-ac");
+    private By botonDeBusqueda = By.id("gh-btn");
+    private By articuloDeCompra = By.xpath("//div[@id='srp-river-results']//li[@class='s-item      ']//a[@class='s-item__link']/h3");
+    private By precioArticuloDeCompra = By.xpath("//*[@id='prcIsum']");
+
+
     Utilities utilities = new Utilities();
 
     @Before
@@ -29,24 +34,26 @@ public class FirstTestingApproach {
     }
 
     @Test
-    public void BuscarProductoPorNombre1() throws InterruptedException {
-        utilities.encontrarElemento(driver.findElement(By.id("gh-ac")));
-        driver.findElement(By.id("gh-ac")).sendKeys("shoes");
+    public void BuscarProductoPorNombre1() {
+        utilities.esVisibleElemento(driver.findElement(campoDeBusqueda));
+        driver.findElement(campoDeBusqueda).sendKeys("shoes");
+        driver.findElement(botonDeBusqueda).click();
 
 
-        driver.findElement(By.id("gh-btn")).click();
-        Thread.sleep(5000);
-        driver.findElement(By.xpath("/html/body/div[4]/div[6]/div[2]/div[1]/div[2]/ul/li[1]/div/div[2]/a/h3")).click();
-        Thread.sleep(5000);
-        precio = driver.findElement(By.xpath("//*[@id=\"prcIsum\"]")).getText();
+        utilities.esVisibleElemento(driver.findElement(articuloDeCompra));
+        driver.findElement(articuloDeCompra).click();
+
+        utilities.esVisibleElemento(driver.findElement(precioArticuloDeCompra));
+        precio = driver.findElement(precioArticuloDeCompra).getText();
+
         System.out.println(precio);
     }
 
     @Test
     public void BuscarProductoPorPrecio2() throws InterruptedException {
-        Thread.sleep(5000);
-        driver.findElement(By.id("gh-ac")).sendKeys(precio);
-        driver.findElement(By.id("gh-btn")).click();
+        utilities.esVisibleElemento(driver.findElement(campoDeBusqueda));
+        driver.findElement(campoDeBusqueda).sendKeys(precio);
+        driver.findElement(botonDeBusqueda).click();
         Thread.sleep(5000);
     }
 
