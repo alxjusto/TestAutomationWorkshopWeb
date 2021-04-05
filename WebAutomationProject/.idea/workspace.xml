@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6c22b4-0dd5-4bcd-82ef-d52cd34a6595" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/web/tests/FirstTestingApproach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/web/tests/FirstTestingApproach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/tests/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/web/tests/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/tests/FirstTestingApproach.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/web/tests/FirstTestingApproach.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/tests/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/web/tests/Utilities.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.FirstTestingApproach.verificarEstadoDelArticuloDesdeDetalleDeArticulo">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -80,8 +78,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FirstTestingApproach.verificarEstadoDelArticuloDesdeDetalleDeArticulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkshopWebAutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.web.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.web.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.web.tests.FirstTestingApproach" />
+      <option name="METHOD_NAME" value="verificarEstadoDelArticuloDesdeDetalleDeArticulo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FirstTestingApproach.verificarEstadoDelArticuloDesdeDetalleDeArticulo" />
         <item itemvalue="JUnit.FirstTestingApproach" />
       </list>
     </recent_temporary>
@@ -95,7 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617595115930</updated>
       <workItem from="1617595118134" duration="1374000" />
-      <workItem from="1617596685207" duration="1715000" />
+      <workItem from="1617596685207" duration="3554000" />
     </task>
     <servers />
   </component>

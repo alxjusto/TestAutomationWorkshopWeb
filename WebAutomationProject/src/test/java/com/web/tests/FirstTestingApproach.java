@@ -1,13 +1,14 @@
 package com.web.tests;
 
-import org.junit.*;
-import org.junit.runners.MethodSorters;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.After;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class FirstTestingApproach {
 
     public static WebDriver driver;
@@ -16,13 +17,13 @@ public class FirstTestingApproach {
     private By campoDeBusqueda = By.id("gh-ac");
     private By botonDeBusqueda = By.id("gh-btn");
     private By articuloDeCompra = By.xpath("//div[@id='srp-river-results']//li[@class='s-item      ']//a[@class='s-item__link']/h3");
-    private By precioArticuloDeCompra = By.xpath("//*[@id='prcIsum']");
+    private By estadoArticuloDesdeDetalle = By.id("vi-itm-cond");
 
 
     Utilities utilities = new Utilities();
 
     @Before
-    public void main(){
+    public void main() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver");
         try {
             driver = new ChromeDriver();
@@ -34,20 +35,28 @@ public class FirstTestingApproach {
     }
 
     @Test
-    public void BuscarProductoPorNombre1() {
+    public void verificarEstadoDelArticuloDesdeDetalleDeArticulo() {
+        buscarArticuloPorNombreDesdePaginaPrincipal("Shoes");
+        elegirArticuloDesdePaginaPrincipal();
+        Assert.assertEquals("el estado es correcto","Nuevo sin caja",obtenerEstadoDelArticuloDesdeDetalleDelArticulo());
+    }
+
+    public void buscarArticuloPorNombreDesdePaginaPrincipal(String articulo) {
         utilities.esVisibleElemento(driver.findElement(campoDeBusqueda));
-        driver.findElement(campoDeBusqueda).sendKeys("shoes");
+        driver.findElement(campoDeBusqueda).sendKeys(articulo);
         driver.findElement(botonDeBusqueda).click();
+    }
 
-
+    public void elegirArticuloDesdePaginaPrincipal() {
         utilities.esVisibleElemento(driver.findElement(articuloDeCompra));
         driver.findElement(articuloDeCompra).click();
-
-        utilities.esVisibleElemento(driver.findElement(precioArticuloDeCompra));
-        precio = driver.findElement(precioArticuloDeCompra).getText();
-
-        System.out.println(precio);
     }
+
+    public String obtenerEstadoDelArticuloDesdeDetalleDelArticulo() {
+        utilities.esVisibleElemento(driver.findElement(estadoArticuloDesdeDetalle));
+        return driver.findElement(estadoArticuloDesdeDetalle).getText();
+    }
+
 
     @Test
     public void BuscarProductoPorPrecio2() throws InterruptedException {
