@@ -3,6 +3,8 @@ package com.web.tests;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +14,7 @@ public class FirstTestingApproach {
 
     public static WebDriver driver;
     public String precio = "";
+    Utilities utilities = new Utilities();
 
     @Before
     public void main(){
@@ -27,8 +30,10 @@ public class FirstTestingApproach {
 
     @Test
     public void BuscarProductoPorNombre1() throws InterruptedException {
-        Thread.sleep(5000);
+        utilities.encontrarElemento(driver.findElement(By.id("gh-ac")));
         driver.findElement(By.id("gh-ac")).sendKeys("shoes");
+
+
         driver.findElement(By.id("gh-btn")).click();
         Thread.sleep(5000);
         driver.findElement(By.xpath("/html/body/div[4]/div[6]/div[2]/div[1]/div[2]/ul/li[1]/div/div[2]/a/h3")).click();
