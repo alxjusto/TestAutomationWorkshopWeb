@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6c22b4-0dd5-4bcd-82ef-d52cd34a6595" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_core_4_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_expressions_6_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_html_0_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_java_4_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_junit_4_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_datatable_1_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_datatable_dependencies_1_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_gherkin_5_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_tag_expressions_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/web/driver/BaseDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/web/runner/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/BusquedaEbaySteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/BusquedaEbay.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopWebAutomationProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopWebAutomationProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/tests/FirstTestingApproach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/FirstTestingApproach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/tests/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/FirstTestingApproach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/web/pageObjects/BusquedaEbayPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/web/util/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/tests/FirstTestingApproach.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/tests/Utilities.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +68,12 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.FirstTestingApproach.verificarEstadoDelArticuloDesdeDetalleDeArticulo">
+  <component name="RunManager" selected="JUnit.Runner">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -65,41 +85,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTestingApproach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: BusquedaEbay" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/BusquedaEbay.feature" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="WorkshopWebAutomationProject" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: BusquedaEbay" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.web.stepDefinitions.*" />
+          <option name="PATTERN" value="cucumber.api.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.web.stepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="com.web.stepDefinitions.FirstTestingApproach" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BusquedaEbayPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkshopWebAutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="web.pageObjects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="web.pageObjects" />
+      <option name="MAIN_CLASS_NAME" value="web.pageObjects.BusquedaEbayPage" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTestingApproach.verificarEstadoDelArticuloDesdeDetalleDeArticulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BusquedaEbayPage.verificarEstadoDelArticuloDesdeDetalleDeArticulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WorkshopWebAutomationProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.web.stepDefinitions.*" />
+          <option name="PATTERN" value="web.pageObjects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.web.stepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="com.web.stepDefinitions.FirstTestingApproach" />
+      <option name="PACKAGE_NAME" value="web.pageObjects" />
+      <option name="MAIN_CLASS_NAME" value="web.pageObjects.BusquedaEbayPage" />
       <option name="METHOD_NAME" value="verificarEstadoDelArticuloDesdeDetalleDeArticulo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WorkshopWebAutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.web.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.web.runner" />
+      <option name="MAIN_CLASS_NAME" value="com.web.runner.Runner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FirstTestingApproach.verificarEstadoDelArticuloDesdeDetalleDeArticulo" />
-        <item itemvalue="JUnit.FirstTestingApproach" />
+        <item itemvalue="JUnit.Runner" />
+        <item itemvalue="Cucumber Java.Feature: BusquedaEbay" />
+        <item itemvalue="JUnit.BusquedaEbayPage.verificarEstadoDelArticuloDesdeDetalleDeArticulo" />
+        <item itemvalue="JUnit.BusquedaEbayPage" />
       </list>
     </recent_temporary>
   </component>

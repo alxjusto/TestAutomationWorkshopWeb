@@ -1,17 +1,19 @@
-package com.web.stepDefinitions;
+package web.pageObjects;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.After;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import web.util.Utilities;
 
-public class FirstTestingApproach {
+public class BusquedaEbayPage {
 
-    public static WebDriver driver;
+    public WebDriver driver;
+
+    public BusquedaEbayPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
     private String precio = "";
 
     private By campoDeBusqueda = By.id("gh-ac");
@@ -22,23 +24,16 @@ public class FirstTestingApproach {
 
     Utilities utilities = new Utilities();
 
-    @Before
-    public void main() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver");
-        try {
-            driver = new ChromeDriver();
 
-        } catch (WebDriverException wde) {
-            System.out.println(wde.getMessage());
-        }
+    public void openURL() {
         driver.get("https://www.ebay.com/");
     }
 
-    @Test
     public void verificarEstadoDelArticuloDesdeDetalleDeArticulo() {
         buscarArticuloPorNombreDesdePaginaPrincipal("Shoes");
         elegirArticuloDesdePaginaPrincipal();
-        Assert.assertEquals("el estado es correcto","Nuevo sin caja",obtenerEstadoDelArticuloDesdeDetalleDelArticulo());
+
+       // Assert.assertEquals("el estado es correcto","Nuevo sin caja",obtenerEstadoDelArticuloDesdeDetalleDelArticulo());
     }
 
     public void buscarArticuloPorNombreDesdePaginaPrincipal(String articulo) {
@@ -58,18 +53,11 @@ public class FirstTestingApproach {
     }
 
 
-    @Test
     public void BuscarProductoPorPrecio2() throws InterruptedException {
         utilities.esVisibleElemento(driver.findElement(campoDeBusqueda));
         driver.findElement(campoDeBusqueda).sendKeys(precio);
         driver.findElement(botonDeBusqueda).click();
         Thread.sleep(5000);
-    }
-
-
-    @After
-    public void CloseDriver() {
-        driver.close();
     }
 
 }
