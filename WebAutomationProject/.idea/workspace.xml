@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8c6c22b4-0dd5-4bcd-82ef-d52cd34a6595" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/tests/FirstTestingApproach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/web/tests/FirstTestingApproach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/tests/FirstTestingApproach.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/web/tests/FirstTestingApproach.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/tests/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/web/tests/Utilities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopWebAutomationProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopWebAutomationProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/tests/FirstTestingApproach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/FirstTestingApproach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/tests/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/Utilities.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,8 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
@@ -67,12 +69,12 @@
       <module name="WorkshopWebAutomationProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.web.tests.*" />
+          <option name="PATTERN" value="com.web.stepDefinitions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.web.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.web.tests.FirstTestingApproach" />
+      <option name="PACKAGE_NAME" value="com.web.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="com.web.stepDefinitions.FirstTestingApproach" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -82,12 +84,12 @@
       <module name="WorkshopWebAutomationProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.web.tests.*" />
+          <option name="PATTERN" value="com.web.stepDefinitions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.web.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.web.tests.FirstTestingApproach" />
+      <option name="PACKAGE_NAME" value="com.web.stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="com.web.stepDefinitions.FirstTestingApproach" />
       <option name="METHOD_NAME" value="verificarEstadoDelArticuloDesdeDetalleDeArticulo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">

@@ -1,4 +1,4 @@
-package com.web.tests;
+package com.web.stepDefinitions;
 
 import org.junit.Assert;
 import org.junit.Before;
