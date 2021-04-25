@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import web.driver.BaseDriver;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/features/BusquedaEbay.feature"},
+@CucumberOptions(features = {"src/test/resources/features/OrdearDesdeSubcategoria.feature"},
         glue = {"com.web.stepDefinitions"},
         tags = {"not @tag", "@wip"})
 public class Runner {

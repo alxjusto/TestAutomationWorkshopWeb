@@ -5,27 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6c22b4-0dd5-4bcd-82ef-d52cd34a6595" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_core_4_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_expressions_6_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_html_0_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_java_4_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_junit_4_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_datatable_1_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_datatable_dependencies_1_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_gherkin_5_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_tag_expressions_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/web/driver/BaseDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/web/runner/Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/BusquedaEbaySteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/BusquedaEbay.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/web/util/Utilidades.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/OrdenarDesdeSubcategoriaSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/OrdearDesdeSubcategoria.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkshopWebAutomationProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopWebAutomationProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/FirstTestingApproach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/web/pageObjects/BusquedaEbayPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/web/util/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/tests/FirstTestingApproach.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/tests/Utilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/web/pageObjects/BusquedaEbayPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/web/pageObjects/OrdenarDesdeSubcategoriaCarretesVintageDePescaPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/web/util/Utilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/web/runner/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/web/stepDefinitions/BusquedaEbaySteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/BusquedaEbay.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/pageObjects/BusquedaEbayPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/util/Utilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/runner/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/web/runner/Runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/web/stepDefinitions/BusquedaEbaySteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/BusquedaEbay.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BusquedaEbayPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrdenarDesdeSubcategoriaCarretesVintageDePescaPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WorkshopWebAutomationProject" />
       <extension name="coverage">
         <pattern>
@@ -112,13 +105,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="web.pageObjects" />
-      <option name="MAIN_CLASS_NAME" value="web.pageObjects.BusquedaEbayPage" />
+      <option name="MAIN_CLASS_NAME" value="web.pageObjects.OrdenarDesdeSubcategoriaCarretesVintageDePescaPage" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BusquedaEbayPage.verificarEstadoDelArticuloDesdeDetalleDeArticulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrdenarDesdeSubcategoriaCarretesVintageDePescaPage.verificarEstadoDelArticuloDesdeDetalleDeArticulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WorkshopWebAutomationProject" />
       <extension name="coverage">
         <pattern>
@@ -127,7 +120,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="web.pageObjects" />
-      <option name="MAIN_CLASS_NAME" value="web.pageObjects.BusquedaEbayPage" />
+      <option name="MAIN_CLASS_NAME" value="web.pageObjects.OrdenarDesdeSubcategoriaCarretesVintageDePescaPage" />
       <option name="METHOD_NAME" value="verificarEstadoDelArticuloDesdeDetalleDeArticulo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -153,8 +146,8 @@
       <list>
         <item itemvalue="JUnit.Runner" />
         <item itemvalue="Cucumber Java.Feature: BusquedaEbay" />
-        <item itemvalue="JUnit.BusquedaEbayPage.verificarEstadoDelArticuloDesdeDetalleDeArticulo" />
-        <item itemvalue="JUnit.BusquedaEbayPage" />
+        <item itemvalue="JUnit.OrdenarDesdeSubcategoriaCarretesVintageDePescaPage.verificarEstadoDelArticuloDesdeDetalleDeArticulo" />
+        <item itemvalue="JUnit.OrdenarDesdeSubcategoriaCarretesVintageDePescaPage" />
       </list>
     </recent_temporary>
   </component>
@@ -168,6 +161,7 @@
       <updated>1617595115930</updated>
       <workItem from="1617595118134" duration="1374000" />
       <workItem from="1617596685207" duration="3554000" />
+      <workItem from="1619382695294" duration="7996000" />
     </task>
     <servers />
   </component>

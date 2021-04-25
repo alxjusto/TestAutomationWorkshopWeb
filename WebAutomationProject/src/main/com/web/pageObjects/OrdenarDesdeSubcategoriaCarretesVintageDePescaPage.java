@@ -2,29 +2,33 @@ package web.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.chrome.ChromeDriver;
-import web.util.Utilities;
+import org.openqa.selenium.support.PageFactory;
+import web.util.Utilidades;
 
 import java.util.concurrent.TimeUnit;
 
-public class OrdenarDesdeSubcategoriaPage {
+public class OrdenarDesdeSubcategoriaCarretesVintageDePescaPage {
 
     public WebDriver driver;
 
-    public OrdenarDesdeSubcategoriaPage(WebDriver driver) {
+    public OrdenarDesdeSubcategoriaCarretesVintageDePescaPage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    private String precio = "";
+//    private String precio = "";
 
-    private By campoDeBusqueda = By.id("gh-ac");
-    private By botonDeBusqueda = By.id("gh-btn");
-    private By articuloDeCompra = By.xpath("//div[@id='srp-river-results']//li[@class='s-item      ']//a[@class='s-item__link']/h3");
-    private By estadoArticuloDesdeDetalle = By.id("vi-itm-cond");
+//    private By campoDeBusqueda = By.id("gh-ac");
+//    private By botonDeBusqueda = By.id("gh-btn");
+//    private By articuloDeCompra = By.xpath("//div[@id='srp-river-results']//li[@class='s-item      ']//a[@class='s-item__link']/h3");
+//    private By estadoArticuloDesdeDetalle = By.id("vi-itm-cond");
 
+    private By opcionCategoriaPaginaPrincipal = By.xpath("//div[@id='mainContent']//li[contains(@class,'cat-nav')]/a[text()='%s']");
+    private By opcionSubCategoriaPaginaPrincipal = By.xpath("//div[@id='mainContent']//li[contains(@class,'cat-nav')]/div//a[text()='%s']");
+    private By opcionDeCarouselDesdeEquipoSuministroYPesca = By.xpath("//div[@id='mainContent']//div[contains(@class,'carousel')]//p[text()='%s']");
+    private By opcionDeCarouselDesdeEquipoDePescaVintage = By.xpath("//div[@id='mainContent']//div[contains(@class,'carousel')]//p[text()='%s']");
 
-    Utilities utilities = new Utilities();
+    Utilidades utilidades = new Utilidades();
 
 
     public void openURL(String url) {
@@ -34,35 +38,38 @@ public class OrdenarDesdeSubcategoriaPage {
         driver.get(url);
     }
 
-    public void verificarEstadoDelArticuloDesdeDetalleDeArticulo() {
-        buscarArticuloPorNombreDesdePaginaPrincipal("Shoes");
-        elegirArticuloDesdePaginaPrincipal();
-
-       // Assert.assertEquals("el estado es correcto","Nuevo sin caja",obtenerEstadoDelArticuloDesdeDetalleDelArticulo());
+    public void elegirCategoriaYSubcategoria(String opcionDeCategoriaPaginaPrincipal, String opcionDeSubCategoriaMasPopulares) {
+        elegirCategoriaDesdePaginaPrincipal(opcionDeCategoriaPaginaPrincipal);
+        selegirSubcategoriaDesdePaginaPrincipal(opcionDeSubCategoriaMasPopulares);
     }
 
-    public void buscarArticuloPorNombreDesdePaginaPrincipal(String articulo) {
-        utilities.esVisibleElemento(driver.findElement(campoDeBusqueda));
-        driver.findElement(campoDeBusqueda).sendKeys(articulo);
-        driver.findElement(botonDeBusqueda).click();
+    private void selegirSubcategoriaDesdePaginaPrincipal(String opcionDeSubCategoriaMasPopulares) {
+        By elementoActualizado = utilidades.actualizarIdentificadorElemento(opcionSubCategoriaPaginaPrincipal, opcionDeSubCategoriaMasPopulares);
+        utilidades.puedoHacerClickSobreElemento(elementoActualizado);
+        utilidades.posicionarPunteroMouse(elementoActualizado);
+        driver.findElement(elementoActualizado).click();
     }
 
-    public void elegirArticuloDesdePaginaPrincipal() {
-        utilities.esVisibleElemento(driver.findElement(articuloDeCompra));
-        driver.findElement(articuloDeCompra).click();
+    public void elegirCategoriaDesdePaginaPrincipal(String opcionDeCategoriaPaginaPrincipal) {
+        By elementoActualizado = utilidades.actualizarIdentificadorElemento(opcionCategoriaPaginaPrincipal, opcionDeCategoriaPaginaPrincipal);
+        utilidades.puedoHacerClickSobreElemento(elementoActualizado);
+        utilidades.posicionarPunteroMouse(elementoActualizado);
     }
 
-    public String obtenerEstadoDelArticuloDesdeDetalleDelArticulo() {
-        utilities.esVisibleElemento(driver.findElement(estadoArticuloDesdeDetalle));
-        return driver.findElement(estadoArticuloDesdeDetalle).getText();
+    public void elegirOpcionDesdeCarruselEquipoYSuministroDePesca(String opcion) {
+        By elementoActualizado = utilidades.actualizarIdentificadorElemento(opcionDeCarouselDesdeEquipoSuministroYPesca, opcion);
+        utilidades.puedoHacerClickSobreElemento(elementoActualizado);
+        driver.findElement(elementoActualizado).click();
     }
 
+    public void elegirOpcionDesdeCarruselEquipoDePescaVintage(String opcion) {
+        By elementoActualizado = utilidades.actualizarIdentificadorElemento(opcionDeCarouselDesdeEquipoDePescaVintage, opcion);
+        utilidades.puedoHacerClickSobreElemento(elementoActualizado);
+        driver.findElement(elementoActualizado).click();
+    }
 
-    public void BuscarProductoPorPrecio2() throws InterruptedException {
-        utilities.esVisibleElemento(driver.findElement(campoDeBusqueda));
-        driver.findElement(campoDeBusqueda).sendKeys(precio);
-        driver.findElement(botonDeBusqueda).click();
-        Thread.sleep(5000);
+    public void selleccionarTipoDeOrdenamiento(String tipoDeOrdenamiento) {
+
     }
 
 }
