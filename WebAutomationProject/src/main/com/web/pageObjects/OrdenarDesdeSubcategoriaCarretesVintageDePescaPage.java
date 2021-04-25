@@ -6,11 +6,13 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import web.util.Utilities;
 
-public class BusquedaEbayPage {
+import java.util.concurrent.TimeUnit;
+
+public class OrdenarDesdeSubcategoriaPage {
 
     public WebDriver driver;
 
-    public BusquedaEbayPage(WebDriver driver) {
+    public OrdenarDesdeSubcategoriaPage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -25,8 +27,11 @@ public class BusquedaEbayPage {
     Utilities utilities = new Utilities();
 
 
-    public void openURL() {
-        driver.get("https://www.ebay.com/");
+    public void openURL(String url) {
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.get(url);
     }
 
     public void verificarEstadoDelArticuloDesdeDetalleDeArticulo() {
