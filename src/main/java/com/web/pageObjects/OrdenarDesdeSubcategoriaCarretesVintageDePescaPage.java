@@ -1,9 +1,9 @@
-package web.pageObjects;
+package com.web.pageObjects;
 
+import com.web.util.Utilidades;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import web.util.Utilidades;
 
 import java.util.concurrent.TimeUnit;
 
