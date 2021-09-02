@@ -1,15 +1,15 @@
 package com.web.runner;
 
 
+import com.web.driver.BaseDriver;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import web.driver.BaseDriver;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/features/OrdearDesdeSubcategoria.feature"},
+@CucumberOptions(features = {"src/test/resources/features/SortFromSubcategory.feature"},
         glue = {"com.web.stepDefinitions"},
         tags = {"not @tag", "@wip"})
 public class Runner {
