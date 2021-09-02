@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/features/OrdearDesdeSubcategoria.feature"},
+@CucumberOptions(features = {"src/test/resources/features/SortFromSubcategory.feature"},
         glue = {"com.web.stepDefinitions"},
         tags = {"not @tag", "@wip"})
 public class Runner {
