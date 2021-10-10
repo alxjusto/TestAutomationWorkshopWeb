@@ -1,19 +1,22 @@
 package com.web.enums;
 
+import org.openqa.selenium.By;
+
 public enum Locator {
 
-    CATEGORY_OPTION_LOCATOR_HOMEPAGE("//div[@id='mainContent']//li[contains(@class,'cat-nav')]/a[text()='%s']"),
-    SUBCATEGORY_OPTION_LOCATOR_HOMEPAGE("//div[@id='mainContent']//li[contains(@class,'cat-nav')]/div//a[text()='%s']"),
-    CARROUSEL_OPTION_LOCATOR_ESF("//div[@id='mainContent']//div[contains(@class,'carousel')]//p[text()='%s']"),
-    CARROUSEL_OPTION_LOCATOR_ESV("//div[@id='mainContent']//div[contains(@class,'carousel')]//p[text()='%s']");
+    CATEGORY_OPTION_LOCATOR_HOMEPAGE(By.xpath("//div[@id='mainContent']//li[contains(@class,'cat-nav')]/a[text()='%s']")),
+    SUBCATEGORY_OPTION_LOCATOR_HOMEPAGE(By.xpath("//div[@id='mainContent']//li[contains(@class,'cat-nav')]/div//a[text()='%s']")),
+    CARROUSEL_OPTION_LOCATOR_ESF(By.xpath("//div[@id='mainContent']//div[contains(@class,'carousel')]//p[text()='%s']")),
+    CARROUSEL_OPTION_LOCATOR_ESV(By.xpath("//div[@id='mainContent']//div[contains(@class,'carousel')]//p[text()='%s']"));
     
-    String value;
+    private final By locator;
 
-    Locator(String value) {
-        this.value = value;
+    Locator(By locator) {
+        this.locator = locator;
     }
 
-    public String getValue() {
-        return value;
+    public By getLocator() {
+        return locator;
     }
+
 }

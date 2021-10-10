@@ -16,23 +16,20 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    private final By categoryOptionlocator = By.xpath(Locator.CATEGORY_OPTION_LOCATOR_HOMEPAGE.getValue());
-    private final By subcategoryOptionLocator = By.xpath(Locator.SUBCATEGORY_OPTION_LOCATOR_HOMEPAGE.getValue());
-
     public void choseCategoryAndSubcategory(String categoryOption, String subcategoryOption) {
         choseCategory(categoryOption);
         choseSubcategory(subcategoryOption);
     }
 
     private void choseSubcategory(String subcategoryOption) {
-        By updatedLocator = utilities.updateElementLocator(subcategoryOptionLocator, subcategoryOption);
+        By updatedLocator = utilities.updateElementLocator(Locator.SUBCATEGORY_OPTION_LOCATOR_HOMEPAGE.getLocator(), subcategoryOption);
         utilities.elementToBeClickable(updatedLocator);
         utilities.mouseHover(updatedLocator);
         driver.findElement(updatedLocator).click();
     }
 
     public void choseCategory(String categoryOption) {
-        By updatedLocator = utilities.updateElementLocator(categoryOptionlocator, categoryOption);
+        By updatedLocator = utilities.updateElementLocator(Locator.CATEGORY_OPTION_LOCATOR_HOMEPAGE.getLocator(), categoryOption);
         utilities.elementToBeClickable(updatedLocator);
         utilities.mouseHover(updatedLocator);
     }

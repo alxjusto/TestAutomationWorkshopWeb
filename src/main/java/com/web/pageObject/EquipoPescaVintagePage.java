@@ -11,15 +11,13 @@ public class EquipoPescaVintagePage {
     public WebDriver driver;
     Utilities utilities = new Utilities();
 
-    private final By carrouselOptionLocatorESV = By.xpath(Locator.CARROUSEL_OPTION_LOCATOR_ESV.getValue());
-
     public EquipoPescaVintagePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
     public void choseOptionFromEquipoPescaVintage(String option) {
-        By updatedLocator = utilities.updateElementLocator(carrouselOptionLocatorESV, option);
+        By updatedLocator = utilities.updateElementLocator(Locator.CARROUSEL_OPTION_LOCATOR_ESV.getLocator(), option);
         utilities.elementToBeClickable(updatedLocator);
         driver.findElement(updatedLocator).click();
     }
