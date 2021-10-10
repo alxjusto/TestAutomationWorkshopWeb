@@ -16,10 +16,8 @@ public class EquipoSuministroPescaPage {
         PageFactory.initElements(driver, this);
     }
 
-    private final By carrouselOptionLocator = By.xpath(Locator.CARROUSEL_OPTION_LOCATOR_ESF.getValue());
-
     public void choseCarrouselOptionFromEquipoSuministro(String option) {
-        By updatedLocator = utilities.updateElementLocator(carrouselOptionLocator, option);
+        By updatedLocator = utilities.updateElementLocator(Locator.CARROUSEL_OPTION_LOCATOR_ESF.getLocator(), option);
         utilities.elementToBeClickable(updatedLocator);
         driver.findElement(updatedLocator).click();
     }
